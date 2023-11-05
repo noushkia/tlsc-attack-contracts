@@ -1,0 +1,343 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "congest",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b5060808061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063312d46c714602d575b600080fd5b60336035565b005b6301c9c2545a1015604557600080fd5b5b604656fea2646970667358221220ce7d7a90f58047db1df11d371f1d88605d759c67dade531b3b2ea22ebe9c084764736f6c63430008130033",
+    "sourceMap": "126:222:20:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063312d46c714602d575b600080fd5b60336035565b005b6301c9c2545a1015604557600080fd5b5b604656fea2646970667358221220ce7d7a90f58047db1df11d371f1d88605d759c67dade531b3b2ea22ebe9c084764736f6c63430008130033",
+    "sourceMap": "126:222:20:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;156:190;;;:::i;:::-;;;298:16;285:9;:29;;277:38;;;;;;325:15;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "congest()": "312d46c7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"congest\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Take up a whole block\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Basic Congestor\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/BasicCongestor.sol\":\"BasicCongestor\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"]},\"sources\":{\"src/BasicCongestor.sol\":{\"keccak256\":\"0xa0fb3b41fffbba37b6dd630080e2009582d4c1682b6277ea639251ad1fcb1dd2\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://f95ff6021a92d5040c8493e2893efed5ec98a9b7508c99907c41c6607fa8e41b\",\"dweb:/ipfs/QmcPyCz6JDhEP6o7ZLRx8tAZxndYKuGQXo75Vy9wtd7DT3\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "congest"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/=lib/openzeppelin-contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/BasicCongestor.sol": "BasicCongestor"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/BasicCongestor.sol": {
+        "keccak256": "0xa0fb3b41fffbba37b6dd630080e2009582d4c1682b6277ea639251ad1fcb1dd2",
+        "urls": [
+          "bzz-raw://f95ff6021a92d5040c8493e2893efed5ec98a9b7508c99907c41c6607fa8e41b",
+          "dweb:/ipfs/QmcPyCz6JDhEP6o7ZLRx8tAZxndYKuGQXo75Vy9wtd7DT3"
+        ],
+        "license": "GPL-3.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/BasicCongestor.sol",
+    "id": 40137,
+    "exportedSymbols": {
+      "BasicCongestor": [
+        40136
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:312:20",
+    "nodes": [
+      {
+        "id": 40118,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:20",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 40136,
+        "nodeType": "ContractDefinition",
+        "src": "126:222:20",
+        "nodes": [
+          {
+            "id": 40135,
+            "nodeType": "FunctionDefinition",
+            "src": "156:190:20",
+            "nodes": [],
+            "body": {
+              "id": 40134,
+              "nodeType": "Block",
+              "src": "187:159:20",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 40128,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 40123,
+                            "name": "gasleft",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -7,
+                            "src": "285:7:20",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_gasleft_view$__$returns$_t_uint256_$",
+                              "typeString": "function () view returns (uint256)"
+                            }
+                          },
+                          "id": 40124,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "285:9:20",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "commonType": {
+                            "typeIdentifier": "t_rational_29999700_by_1",
+                            "typeString": "int_const 29999700"
+                          },
+                          "id": 40127,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "hexValue": "33305f3030305f303030",
+                            "id": 40125,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "298:10:20",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_30000000_by_1",
+                              "typeString": "int_const 30000000"
+                            },
+                            "value": "30_000_000"
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "-",
+                          "rightExpression": {
+                            "hexValue": "333030",
+                            "id": 40126,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "311:3:20",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_300_by_1",
+                              "typeString": "int_const 300"
+                            },
+                            "value": "300"
+                          },
+                          "src": "298:16:20",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_29999700_by_1",
+                            "typeString": "int_const 29999700"
+                          }
+                        },
+                        "src": "285:29:20",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 40122,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "277:7:20",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 40129,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "277:38:20",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 40130,
+                  "nodeType": "ExpressionStatement",
+                  "src": "277:38:20"
+                },
+                {
+                  "body": {
+                    "id": 40132,
+                    "nodeType": "Block",
+                    "src": "338:2:20",
+                    "statements": []
+                  },
+                  "condition": {
+                    "hexValue": "74727565",
+                    "id": 40131,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "332:4:20",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "id": 40133,
+                  "nodeType": "WhileStatement",
+                  "src": "325:15:20"
+                }
+              ]
+            },
+            "functionSelector": "312d46c7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "congest",
+            "nameLocation": "165:7:20",
+            "parameters": {
+              "id": 40120,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "172:2:20"
+            },
+            "returnParameters": {
+              "id": 40121,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "187:0:20"
+            },
+            "scope": 40136,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "BasicCongestor",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 40119,
+          "nodeType": "StructuredDocumentation",
+          "src": "62:63:20",
+          "text": " @title Basic Congestor\n @dev Take up a whole block"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          40136
+        ],
+        "name": "BasicCongestor",
+        "nameLocation": "135:14:20",
+        "scope": 40137,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-3.0"
+  },
+  "id": 20
+}

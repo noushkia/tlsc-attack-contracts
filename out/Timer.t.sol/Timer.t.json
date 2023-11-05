@@ -1,0 +1,21 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/Timer.t.sol",
+    "id": 40499,
+    "exportedSymbols": {},
+    "nodeType": "SourceUnit",
+    "src": "2054:0:24",
+    "nodes": [],
+    "license": "UNLICENSED"
+  },
+  "id": 24
+}
