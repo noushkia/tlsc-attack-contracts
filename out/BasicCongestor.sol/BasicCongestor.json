@@ -4,24 +4,24 @@
       "inputs": [],
       "name": "congest",
       "outputs": [],
-      "stateMutability": "view",
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
   "bytecode": {
-    "object": "0x6080604052348015600f57600080fd5b5060808061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063312d46c714602d575b600080fd5b60336035565b005b6301c9c2545a1015604557600080fd5b5b604656fea2646970667358221220ce7d7a90f58047db1df11d371f1d88605d759c67dade531b3b2ea22ebe9c084764736f6c63430008130033",
-    "sourceMap": "126:222:20:-:0;;;;;;;;;;;;;;;;;;;",
+    "object": "0x6080604052348015600f57600080fd5b5060808061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063312d46c714602d575b600080fd5b60336035565b005b6301c9c2545a1015604557600080fd5b5b604656fea264697066735822122092ea977ad3a41ef98f221488b0152fe81d1f0b5b4b06ea5c7ddebd957fa6060e64736f6c63430008130033",
+    "sourceMap": "126:355:20:-:0;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063312d46c714602d575b600080fd5b60336035565b005b6301c9c2545a1015604557600080fd5b5b604656fea2646970667358221220ce7d7a90f58047db1df11d371f1d88605d759c67dade531b3b2ea22ebe9c084764736f6c63430008130033",
-    "sourceMap": "126:222:20:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;156:190;;;:::i;:::-;;;298:16;285:9;:29;;277:38;;;;;;325:15;;",
+    "object": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063312d46c714602d575b600080fd5b60336035565b005b6301c9c2545a1015604557600080fd5b5b604656fea264697066735822122092ea977ad3a41ef98f221488b0152fe81d1f0b5b4b06ea5c7ddebd957fa6060e64736f6c63430008130033",
+    "sourceMap": "126:355:20:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;156:323;;;:::i;:::-;;;431:16;418:9;:29;;410:38;;;;;;458:15;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {
     "congest()": "312d46c7"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"congest\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Take up a whole block\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Basic Congestor\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/BasicCongestor.sol\":\"BasicCongestor\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"]},\"sources\":{\"src/BasicCongestor.sol\":{\"keccak256\":\"0xa0fb3b41fffbba37b6dd630080e2009582d4c1682b6277ea639251ad1fcb1dd2\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://f95ff6021a92d5040c8493e2893efed5ec98a9b7508c99907c41c6607fa8e41b\",\"dweb:/ipfs/QmcPyCz6JDhEP6o7ZLRx8tAZxndYKuGQXo75Vy9wtd7DT3\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"congest\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Take up a whole block\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Basic Congestor\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/BasicCongestor.sol\":\"BasicCongestor\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"]},\"sources\":{\"src/BasicCongestor.sol\":{\"keccak256\":\"0xa3a13de8a24ea471cbcc085a8ecba415957a5b5a8a57905ba315ba009bbf1ac3\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://3ce4183da649adadeae3967db4b22fae8a9f632261c20280b9e9669ce84edcfd\",\"dweb:/ipfs/QmT7WrUsVevsMH4gFLky8iYH61pNVPSQY9p1JeKxADqAHY\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.19+commit.7dd6d404"
@@ -31,7 +31,7 @@
       "abi": [
         {
           "inputs": [],
-          "stateMutability": "view",
+          "stateMutability": "nonpayable",
           "type": "function",
           "name": "congest"
         }
@@ -70,10 +70,10 @@
     },
     "sources": {
       "src/BasicCongestor.sol": {
-        "keccak256": "0xa0fb3b41fffbba37b6dd630080e2009582d4c1682b6277ea639251ad1fcb1dd2",
+        "keccak256": "0xa3a13de8a24ea471cbcc085a8ecba415957a5b5a8a57905ba315ba009bbf1ac3",
         "urls": [
-          "bzz-raw://f95ff6021a92d5040c8493e2893efed5ec98a9b7508c99907c41c6607fa8e41b",
-          "dweb:/ipfs/QmcPyCz6JDhEP6o7ZLRx8tAZxndYKuGQXo75Vy9wtd7DT3"
+          "bzz-raw://3ce4183da649adadeae3967db4b22fae8a9f632261c20280b9e9669ce84edcfd",
+          "dweb:/ipfs/QmT7WrUsVevsMH4gFLky8iYH61pNVPSQY9p1JeKxADqAHY"
         ],
         "license": "GPL-3.0"
       }
@@ -82,17 +82,17 @@
   },
   "ast": {
     "absolutePath": "src/BasicCongestor.sol",
-    "id": 40137,
+    "id": 43398,
     "exportedSymbols": {
       "BasicCongestor": [
-        40136
+        43397
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "37:312:20",
+    "src": "37:445:20",
     "nodes": [
       {
-        "id": 40118,
+        "id": 43379,
         "nodeType": "PragmaDirective",
         "src": "37:23:20",
         "nodes": [],
@@ -104,19 +104,19 @@
         ]
       },
       {
-        "id": 40136,
+        "id": 43397,
         "nodeType": "ContractDefinition",
-        "src": "126:222:20",
+        "src": "126:355:20",
         "nodes": [
           {
-            "id": 40135,
+            "id": 43396,
             "nodeType": "FunctionDefinition",
-            "src": "156:190:20",
+            "src": "156:323:20",
             "nodes": [],
             "body": {
-              "id": 40134,
+              "id": 43395,
               "nodeType": "Block",
-              "src": "187:159:20",
+              "src": "182:297:20",
               "nodes": [],
               "statements": [
                 {
@@ -127,7 +127,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 40128,
+                        "id": 43389,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -136,18 +136,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 40123,
+                            "id": 43384,
                             "name": "gasleft",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -7,
-                            "src": "285:7:20",
+                            "src": "418:7:20",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_gasleft_view$__$returns$_t_uint256_$",
                               "typeString": "function () view returns (uint256)"
                             }
                           },
-                          "id": 40124,
+                          "id": 43385,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -156,7 +156,7 @@
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "285:9:20",
+                          "src": "418:9:20",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -170,21 +170,21 @@
                             "typeIdentifier": "t_rational_29999700_by_1",
                             "typeString": "int_const 29999700"
                           },
-                          "id": 40127,
+                          "id": 43388,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "leftExpression": {
                             "hexValue": "33305f3030305f303030",
-                            "id": 40125,
+                            "id": 43386,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "298:10:20",
+                            "src": "431:10:20",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_30000000_by_1",
                               "typeString": "int_const 30000000"
@@ -195,27 +195,27 @@
                           "operator": "-",
                           "rightExpression": {
                             "hexValue": "333030",
-                            "id": 40126,
+                            "id": 43387,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "311:3:20",
+                            "src": "444:3:20",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_300_by_1",
                               "typeString": "int_const 300"
                             },
                             "value": "300"
                           },
-                          "src": "298:16:20",
+                          "src": "431:16:20",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_29999700_by_1",
                             "typeString": "int_const 29999700"
                           }
                         },
-                        "src": "285:29:20",
+                        "src": "418:29:20",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -229,7 +229,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 40122,
+                      "id": 43383,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -237,13 +237,13 @@
                         -18
                       ],
                       "referencedDeclaration": -18,
-                      "src": "277:7:20",
+                      "src": "410:7:20",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 40129,
+                    "id": 43390,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -252,43 +252,43 @@
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "277:38:20",
+                    "src": "410:38:20",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 40130,
+                  "id": 43391,
                   "nodeType": "ExpressionStatement",
-                  "src": "277:38:20"
+                  "src": "410:38:20"
                 },
                 {
                   "body": {
-                    "id": 40132,
+                    "id": 43393,
                     "nodeType": "Block",
-                    "src": "338:2:20",
+                    "src": "471:2:20",
                     "statements": []
                   },
                   "condition": {
                     "hexValue": "74727565",
-                    "id": 40131,
+                    "id": 43392,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "332:4:20",
+                    "src": "465:4:20",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
                     "value": "true"
                   },
-                  "id": 40133,
+                  "id": 43394,
                   "nodeType": "WhileStatement",
-                  "src": "325:15:20"
+                  "src": "458:15:20"
                 }
               ]
             },
@@ -299,19 +299,19 @@
             "name": "congest",
             "nameLocation": "165:7:20",
             "parameters": {
-              "id": 40120,
+              "id": 43381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "172:2:20"
             },
             "returnParameters": {
-              "id": 40121,
+              "id": 43382,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "187:0:20"
+              "src": "182:0:20"
             },
-            "scope": 40136,
-            "stateMutability": "view",
+            "scope": 43397,
+            "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
@@ -322,18 +322,18 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 40119,
+          "id": 43380,
           "nodeType": "StructuredDocumentation",
           "src": "62:63:20",
           "text": " @title Basic Congestor\n @dev Take up a whole block"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          40136
+          43397
         ],
         "name": "BasicCongestor",
         "nameLocation": "135:14:20",
-        "scope": 40137,
+        "scope": 43398,
         "usedErrors": []
       }
     ],

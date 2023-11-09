@@ -11,8 +11,48 @@
     ]
   },
   "files": {
+    "lib/forge-std/lib/ds-test/src/test.sol": {
+      "lastModificationDate": 1699175560843,
+      "contentHash": "9febff9d09f18af5306669dc276c4c43",
+      "sourceName": "lib/forge-std/lib/ds-test/src/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "DSTest": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "test.sol/DSTest.json"
+        }
+      }
+    },
     "lib/forge-std/src/Base.sol": {
-      "lastModificationDate": 1696146470384,
+      "lastModificationDate": 1699175560843,
       "contentHash": "ee13c050b1914464f1d3f90cde90204b",
       "sourceName": "lib/forge-std/src/Base.sol",
       "solcConfig": {
@@ -61,7 +101,7 @@
       }
     },
     "lib/forge-std/src/Script.sol": {
-      "lastModificationDate": 1696146470384,
+      "lastModificationDate": 1699175560843,
       "contentHash": "ba325c778a7da8a21c2136aa32763c14",
       "sourceName": "lib/forge-std/src/Script.sol",
       "solcConfig": {
@@ -114,8 +154,51 @@
         }
       }
     },
+    "lib/forge-std/src/StdAssertions.sol": {
+      "lastModificationDate": 1699175560843,
+      "contentHash": "6cc2858240bcd443debbbf075490e325",
+      "sourceName": "lib/forge-std/src/StdAssertions.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/StdMath.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdAssertions": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdAssertions.sol/StdAssertions.json"
+        }
+      }
+    },
     "lib/forge-std/src/StdChains.sol": {
-      "lastModificationDate": 1696146470384,
+      "lastModificationDate": 1699175560843,
       "contentHash": "b0324b2e5a11948f852032aa293b3a05",
       "sourceName": "lib/forge-std/src/StdChains.sol",
       "solcConfig": {
@@ -157,7 +240,7 @@
       }
     },
     "lib/forge-std/src/StdCheats.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "d984e2c76dae07bac1e292af2a5d4fd1",
       "sourceName": "lib/forge-std/src/StdCheats.sol",
       "solcConfig": {
@@ -203,8 +286,88 @@
         }
       }
     },
+    "lib/forge-std/src/StdError.sol": {
+      "lastModificationDate": 1699175560843,
+      "contentHash": "64c896e1276a291776e5ea5aecb3870a",
+      "sourceName": "lib/forge-std/src/StdError.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdError": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdError.sol/stdError.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdInvariant.sol": {
+      "lastModificationDate": 1699175560843,
+      "contentHash": "0a580d6fac69e9d4b6504f747f3c0c24",
+      "sourceName": "lib/forge-std/src/StdInvariant.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdInvariant": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "StdInvariant.sol/StdInvariant.json"
+        }
+      }
+    },
     "lib/forge-std/src/StdJson.sol": {
-      "lastModificationDate": 1696146471884,
+      "lastModificationDate": 1699175560843,
       "contentHash": "b5de4d3e9eda3333019b0e407ec2a1ac",
       "sourceName": "lib/forge-std/src/StdJson.sol",
       "solcConfig": {
@@ -246,7 +409,7 @@
       }
     },
     "lib/forge-std/src/StdMath.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "9da8f453eba6bb98f3d75bc6822bfb29",
       "sourceName": "lib/forge-std/src/StdMath.sol",
       "solcConfig": {
@@ -286,7 +449,7 @@
       }
     },
     "lib/forge-std/src/StdStorage.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "abd6f3379e6e2a7979b18abc21aea0c1",
       "sourceName": "lib/forge-std/src/StdStorage.sol",
       "solcConfig": {
@@ -331,7 +494,7 @@
       }
     },
     "lib/forge-std/src/StdStyle.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "6281165a12aa639705c691fccefd855e",
       "sourceName": "lib/forge-std/src/StdStyle.sol",
       "solcConfig": {
@@ -373,7 +536,7 @@
       }
     },
     "lib/forge-std/src/StdUtils.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "3ce83748fd76644688f916c9cced545b",
       "sourceName": "lib/forge-std/src/StdUtils.sol",
       "solcConfig": {
@@ -415,8 +578,66 @@
         }
       }
     },
+    "lib/forge-std/src/Test.sol": {
+      "lastModificationDate": 1699175560843,
+      "contentHash": "15866901137b5670eabf31362523bd28",
+      "sourceName": "lib/forge-std/src/Test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Test": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "Test.sol/Test.json"
+        }
+      }
+    },
     "lib/forge-std/src/Vm.sol": {
-      "lastModificationDate": 1696146471884,
+      "lastModificationDate": 1699175560843,
       "contentHash": "99c76f92020cc3d67eca52e07eea5d77",
       "sourceName": "lib/forge-std/src/Vm.sol",
       "solcConfig": {
@@ -459,7 +680,7 @@
       }
     },
     "lib/forge-std/src/console.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
       "sourceName": "lib/forge-std/src/console.sol",
       "solcConfig": {
@@ -499,7 +720,7 @@
       }
     },
     "lib/forge-std/src/console2.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "491ca717c1915995e78cc361485a3067",
       "sourceName": "lib/forge-std/src/console2.sol",
       "solcConfig": {
@@ -539,7 +760,7 @@
       }
     },
     "lib/forge-std/src/interfaces/IMulticall3.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560843,
       "contentHash": "7b131ca1ca32ef6378b7b9ad5488b901",
       "sourceName": "lib/forge-std/src/interfaces/IMulticall3.sol",
       "solcConfig": {
@@ -579,7 +800,7 @@
       }
     },
     "lib/forge-std/src/safeconsole.sol": {
-      "lastModificationDate": 1696146470388,
+      "lastModificationDate": 1699175560847,
       "contentHash": "ac3b1bf5a444db5db3656021830258a8",
       "sourceName": "lib/forge-std/src/safeconsole.sol",
       "solcConfig": {
@@ -619,7 +840,7 @@
       }
     },
     "script/Counter.s.sol": {
-      "lastModificationDate": 1696146468800,
+      "lastModificationDate": 1699175560783,
       "contentHash": "0705c52104730a78aef4aa6694175c81",
       "sourceName": "script/Counter.s.sol",
       "solcConfig": {
@@ -674,8 +895,8 @@
       }
     },
     "src/BasicCongestor.sol": {
-      "lastModificationDate": 1697802728678,
-      "contentHash": "8769dadb078baacf503b7b773c8412c2",
+      "lastModificationDate": 1699175560783,
+      "contentHash": "ecc10b8d7a84c23389724bb0c9ede2a7",
       "sourceName": "src/BasicCongestor.sol",
       "solcConfig": {
         "settings": {
@@ -714,8 +935,8 @@
       }
     },
     "src/DeadlinedCongestor.sol": {
-      "lastModificationDate": 1697802727022,
-      "contentHash": "ea61c34cb59241319bcc96b20e39abe8",
+      "lastModificationDate": 1699175560783,
+      "contentHash": "1259e114a86cca07454158db3f1fd06c",
       "sourceName": "src/DeadlinedCongestor.sol",
       "solcConfig": {
         "settings": {
@@ -753,9 +974,49 @@
         }
       }
     },
+    "src/EscrowCongestion.sol": {
+      "lastModificationDate": 1699535169894,
+      "contentHash": "9c6109e368b210a95a6f05a0c3050975",
+      "sourceName": "src/EscrowCongestion.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "<0.9.0",
+      "artifacts": {
+        "EscrowCongestion": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "EscrowCongestion.sol/EscrowCongestion.json"
+        }
+      }
+    },
     "src/IntervalCongestor.sol": {
-      "lastModificationDate": 1697802723982,
-      "contentHash": "ac7a8f4660ebff4c536edd14066ff47f",
+      "lastModificationDate": 1699175560783,
+      "contentHash": "8dee2755e38f3026e24a04b5204ceaba",
       "sourceName": "src/IntervalCongestor.sol",
       "solcConfig": {
         "settings": {
@@ -794,8 +1055,8 @@
       }
     },
     "src/Timer.sol": {
-      "lastModificationDate": 1698830865145,
-      "contentHash": "cf95094a9370c0c28eee7a27b0e64e99",
+      "lastModificationDate": 1699175560783,
+      "contentHash": "43968ccc2ec9ebdd8d0391f75489d195",
       "sourceName": "src/Timer.sol",
       "solcConfig": {
         "settings": {
@@ -833,8 +1094,68 @@
         }
       }
     },
+    "test/EscrowCongestion.t.sol": {
+      "lastModificationDate": 1699534487481,
+      "contentHash": "4f1b77ec7cce4fb5508fa516aaf124e3",
+      "sourceName": "test/EscrowCongestion.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol",
+        "src/EscrowCongestion.sol"
+      ],
+      "versionRequirement": "^0.8.10",
+      "artifacts": {
+        "EscrowCongestionTest": {
+          "0.8.19+commit.7dd6d404.Linux.gcc": "EscrowCongestion.t.sol/EscrowCongestionTest.json"
+        }
+      }
+    },
     "test/Timer.t.sol": {
-      "lastModificationDate": 1698827059944,
+      "lastModificationDate": 1699175560783,
       "contentHash": "0911d059d2634e6d0f2095075834d3c9",
       "sourceName": "test/Timer.t.sol",
       "solcConfig": {
