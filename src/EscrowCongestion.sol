@@ -42,6 +42,8 @@ contract EscrowCongestion {
     // Variable to keep track of the count of congested blocks
     uint256 private congested_block_count;
 
+    // [0x16b6ff83df3ef14f614c70ac29e8a05d102c6bed0e5882c284abf0120b89529c], 10029487, 10029488, 10000000000000000
+    
     // The constructor will initialize the expected transaction roots for each block
     constructor(
         bytes32[] memory _block_tx_roots,
@@ -49,6 +51,7 @@ contract EscrowCongestion {
         uint256 _end_block,
         uint256 _block_reward
     ) {
+        require(_start_block > block.number, "Invalid block range");
         // ensure the length of _block_tx_roots is equal to the block range
         require(
             _block_tx_roots.length == _end_block - _start_block,
@@ -67,13 +70,14 @@ contract EscrowCongestion {
 
         // set the block tx roots
         for (uint i = _start_block; i < _end_block; i++) {
-            block_tx_roots[i] = _block_tx_roots[i];
+            block_tx_roots[i] = _block_tx_roots[i-_start_block];
         }
     }
 
     // This transaction must be the only transaction executed in the block.
     // It will store the current blocks reward address and after correct
     // verifications, the miner can claim the reward.
+    // 66,038 gas?
     function congest() external {
         // Store the previous block hash in case the congestion period is over 256 blocks
         block_hash[block.number - 1] = blockhash(block.number - 1);
