@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
 // Layout of Contract:
-// version
+// Version
 // State variables
 // Functions
 
@@ -15,11 +15,14 @@ pragma solidity <0.9.0;
 
 /**
  * @title Escrow Congestor
- * @dev The only transaction in the block
+ * @dev The only transaction in the block and the reward payout system
  */
 contract EscrowCongestion {
+    // Store block hashes in case the congestion period is higher than 256 blocks
+    mapping(uint256 => bytes32) private block_hash;
+
     // The addresses of the miners who mined the congested blocks
-    mapping(uint256 => address) public block_reward_addresses;
+    mapping(uint256 => address) private block_reward_addresses;
 
     // The transaction roots for each block (initialized in contract creation)
     mapping(uint256 => bytes32) public block_tx_roots;
@@ -27,48 +30,100 @@ contract EscrowCongestion {
     // The block reward for the congested blocks
     uint256 public block_reward = 1 ether;
 
+    // The start block of the congested blocks
+    uint256 public start_block = 0;
+
+    // The end block of the congested blocks
+    uint256 public end_block = 0;
+
+    // State variable to keep track of congested blocks
+    mapping(uint256 => bool) private congested_blocks;
+
+    // Variable to keep track of the count of congested blocks
+    uint256 private congested_block_count;
+
     // The constructor will initialize the expected transaction roots for each block
-    constructor(bytes32[] memory _block_tx_roots) {
-        for (uint i = 0; i < _block_tx_roots.length; i++) {
+    constructor(
+        bytes32[] memory _block_tx_roots,
+        uint256 _start_block,
+        uint256 _end_block,
+        uint256 _block_reward
+    ) {
+        // ensure the length of _block_tx_roots is equal to the block range
+        require(
+            _block_tx_roots.length == _end_block - _start_block,
+            "The length of the block tx roots must be equal to the block range"
+        );
+
+        // ensure the block range is not empty
+        require(_start_block < _end_block, "The block range is empty");
+
+        // set the block reward
+        block_reward = _block_reward;
+
+        // set the block range
+        start_block = _start_block;
+        end_block = _end_block;
+
+        // set the block tx roots
+        for (uint i = _start_block; i < _end_block; i++) {
             block_tx_roots[i] = _block_tx_roots[i];
         }
-    }
-
-    // Pay the miner the fixed reward for congesting the block.
-    // The miner can claim the reward if the block is congested and the
-    // transaction is the only one in the block.
-    function claim_reward(
-        bytes[] calldata pre_root_encoding,
-        bytes[] calldata post_root_encoding,
-        uint256 _block_number
-    ) external payable {
-        require(
-            block_reward_addresses[_block_number] == msg.sender,
-            "Only the proposer can claim the reward"
-        );
-
-        bytes32 claimed_hash = compute_claimed_block_hash(
-            pre_root_encoding,
-            block_tx_roots[_block_number],
-            post_root_encoding
-        );
-        bool hash_is_equal = claimed_hash == blockhash(_block_number);
-
-        // Ensure the block hash is equal to the claimed hash i.e. there is only the congest transaction in the block
-        require(hash_is_equal, "Block hash is not equal to the real hash");
-
-        // Reset the block reward address to prevent double claiming
-        block_reward_addresses[_block_number] = address(0);
-
-        // Pay the miner the reward
-        payable(block_reward_addresses[_block_number]).transfer(block_reward);
     }
 
     // This transaction must be the only transaction executed in the block.
     // It will store the current blocks reward address and after correct
     // verifications, the miner can claim the reward.
-    function congest() public {
+    function congest() external {
+        // Store the previous block hash in case the congestion period is over 256 blocks
+        block_hash[block.number - 1] = blockhash(block.number - 1);
+
+        // Store the current block reward address for future payments
         block_reward_addresses[block.number] = block.coinbase;
+    }
+
+    // Pay the miner the fixed reward for congesting the block.
+    // The miner can claim the reward if the block is congested and the
+    // transaction is the only one in the block.
+    // All the miners in the block range must post this transactions.
+    // When the block range is verified, the rewards are paid out.
+    function claim_reward(
+        bytes[] calldata pre_root_encoding,
+        bytes[] calldata post_root_encoding,
+        uint256 _block_number
+    ) external {
+        bytes32 claimed_hash = compute_claimed_block_hash(
+            pre_root_encoding,
+            block_tx_roots[_block_number],
+            post_root_encoding
+        );
+        bool hash_is_equal = claimed_hash == block_hash[_block_number];
+
+        // Ensure the block hash is equal to the claimed hash i.e. there is only the congest transaction in the block
+        require(hash_is_equal, "Block hash is not equal to the real hash");
+
+        if (!congested_blocks[_block_number]) {
+            congested_blocks[_block_number] = true;
+            congested_block_count++;
+        }
+
+        if (congested_block_count == end_block - start_block) {
+            pay_rewards();
+        }
+    }
+
+    // Pay the miners the fixed(could be dynamic) reward for congesting the block.
+    function pay_rewards() public payable {
+        // iterate over block_reward_addresses and pay the miners
+        for (uint i = start_block; i < end_block; i++) {
+            address coinbase = block_reward_addresses[i];
+
+            // Update the block_reward_addresses to prevent double payments
+            block_reward_addresses[i] = address(0);
+
+            // Pay the miner the reward
+            payable(coinbase).transfer(block_reward);
+        }
     }
 
     function compute_claimed_block_hash(
